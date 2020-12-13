@@ -8,15 +8,12 @@ include(CheckInline)
 include(CheckIncludeFile)
 
 # Versioning
-file(READ cairo-version.h cairo_version_h)
-string(REGEX REPLACE ".*#define CAIRO_VERSION_MAJOR ([0-9]+)\n.*" "\\1"
-                     CAIRO_VERSION_MAJOR ${cairo_version_h})
-string(REGEX REPLACE ".*#define CAIRO_VERSION_MINOR ([0-9]+)\n.*" "\\1"
-                     CAIRO_VERSION_MINOR ${cairo_version_h})
-string(REGEX REPLACE ".*#define CAIRO_VERSION_MICRO ([0-9]+)\n.*" "\\1"
-                     CAIRO_VERSION_MICRO ${cairo_version_h})
-set(CAIRO_VERSION "${CAIRO_VERSION_MAJOR}.${CAIRO_VERSION_MINOR}.${CAIRO_VERSION_MICRO}")
-message(STATUS "Building cairo version ${CAIRO_VERSION}")
+# file(READ cairo-version.h cairo_version_h)
+# string(REGEX REPLACE ".*#define CAIRO_VERSION_MAJOR ([0-9]+)\n.*" "\\1" CAIRO_VERSION_MAJOR ${cairo_version_h})
+# string(REGEX REPLACE ".*#define CAIRO_VERSION_MINOR ([0-9]+)\n.*" "\\1" CAIRO_VERSION_MINOR ${cairo_version_h})
+# string(REGEX REPLACE ".*#define CAIRO_VERSION_MICRO ([0-9]+)\n.*" "\\1" CAIRO_VERSION_MICRO ${cairo_version_h})
+# set(CAIRO_VERSION "${CAIRO_VERSION_MAJOR}.${CAIRO_VERSION_MINOR}.${CAIRO_VERSION_MICRO}")
+# message(STATUS "Building cairo version ${CAIRO_VERSION}")
 
 # Configuration
 include_directories(

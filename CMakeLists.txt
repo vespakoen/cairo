@@ -62,6 +62,10 @@ set(CAIRO_HAS_PTHREAD ${CMAKE_USE_PTHREADS_INIT})
 set(CAIRO_HAS_REAL_PTHREAD ${HAVE_PTHREADS})
 link_libraries(${CMAKE_THREAD_LIBS_INIT})
 
+if(WIN32)
+    set(CAIRO_HAS_WIN32_FONT ON)
+endif()
+
 # Dependencies
 if(NOT PIXMAN_FOUND)
     find_package(PkgConfig REQUIRED)
